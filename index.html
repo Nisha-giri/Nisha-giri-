@@ -8,7 +8,7 @@
     <!-- SEO -->
     <meta name="description" content="Join 10K+ people learning in-demand skills and earning ₹50K-₹1L monthly. Start today!">
     <meta property="og:image" content="https://i.ibb.co/tpvbjn83/farzeen-mam-langing-page-pic.jpg">
-    <meta name="theme-color" content="#6C63FF">
+    <meta name="theme-color" content="#2E5E99">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,34 +32,32 @@
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=10010934885610843&ev=PageView&noscript=1"/></noscript>
 
     <style>
-        /* ===== HYPERBOUND COLOUR PALETTE ===== */
+        /* ===== NEW COLOR THEME ===== */
         :root {
-            --deep-indigo: #0F0C29;
-            --mid-indigo: #242B80;
-            --violet: #6C63FF;
-            --cyan: #00D9FF;
-            --hot-pink: #FF006E;
-            --white: #FFFFFF;
-            --light-grey: #E0E0E0;
-            --shadow: 0 6px 20px rgba(108,99,255,.15);
-            --shadow-hover: 0 10px 30px rgba(108,99,255,.25);
-            --glow: 0 0 25px rgba(0,217,255,.4);
-            --glow-intense: 0 0 40px rgba(0,217,255,.6);
+            --lightest: #E7F0FA;   /* page background */
+            --light:    #7BA4D0;   /* cards, borders */
+            --primary:  #2E5E99;   /* buttons, accents */
+            --darkest:  #0D2440;   /* text on light */
+            --white:    #FFFFFF;
+            --shadow: 0 6px 20px rgba(46,94,153,.15);
+            --shadow-hover: 0 10px 30px rgba(46,94,153,.25);
+            --glow: 0 0 25px rgba(123,164,208,.5);
+            --glow-intense: 0 0 40px rgba(123,164,208,.7);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--deep-indigo), var(--mid-indigo));
-            color: var(--white);   /* GLOBAL FIX: base text white */
+            background: var(--lightest);
+            color: var(--darkest);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
         /* Light Effects */
         @keyframes pulseGlow {
-            0%,100%{box-shadow:0 0 20px rgba(0,217,255,.4);}
-            50%{box-shadow:0 0 40px rgba(0,217,255,.8);}
+            0%,100%{box-shadow:0 0 20px rgba(123,164,208,.4);}
+            50%{box-shadow:0 0 40px rgba(123,164,208,.8);}
         }
         .glow-pulse { animation: pulseGlow 2.5s infinite; }
 
@@ -74,51 +72,58 @@
         }
         .shine-effect:hover::before{opacity:1;}
 
+        /* Pure-white stats card */
+        .stats-white{
+            background:var(--white)!important;
+            color:var(--darkest)!important;
+            border:1px solid var(--light);
+        }
+
         .glow-border{
             border:2px solid transparent;
-            background:linear-gradient(var(--deep-indigo),var(--deep-indigo)) padding-box,
-                       linear-gradient(135deg,var(--cyan),var(--violet)) border-box;
+            background:linear-gradient(var(--white),var(--white)) padding-box,
+                       linear-gradient(135deg,var(--primary),var(--light)) border-box;
             transition:all .4s;
         }
-        .glow-border:hover{box-shadow:0 0 25px rgba(0,217,255,.4);transform:translateY(-3px);}
+        .glow-border:hover{box-shadow:0 0 25px rgba(46,94,153,.4);transform:translateY(-3px);}
 
         .wa-btn{
-            background:linear-gradient(135deg,var(--violet),var(--hot-pink));
+            background:linear-gradient(135deg,var(--primary),var(--light));
             color:var(--white);
             padding:.85rem 1.8rem;border-radius:50px;font-weight:800;border:none;
             display:inline-flex;align-items:center;gap:.5rem;
-            box-shadow:0 8px 20px rgba(108,99,255,.3);
+            box-shadow:0 8px 20px rgba(46,94,153,.3);
             cursor:pointer;transition:all .3s;text-decoration:none;font-size:1rem;white-space:nowrap;
             position:relative;overflow:hidden;
         }
         .wa-btn:hover{
             transform:translateY(-3px) scale(1.03);
-            box-shadow:var(--glow-intense),0 15px 30px rgba(108,99,255,.4);
+            box-shadow:var(--glow-intense),0 15px 30px rgba(46,94,153,.4);
         }
         .wa-btn:active{transform:translateY(0) scale(.98);}
 
         section{padding:50px 0;position:relative;}
         .hero-section{
-            background: linear-gradient(135deg, var(--deep-indigo), var(--mid-indigo));
+            background: linear-gradient(135deg, var(--lightest), var(--light));
             padding:70px 0 50px;overflow:hidden;
         }
         .badge-custom{
-            background:linear-gradient(135deg,var(--cyan),var(--violet));
+            background:linear-gradient(135deg,var(--light),var(--primary));
             color:var(--white);padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.875rem;
             display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow);
         }
         .gradient-text{
-            background:linear-gradient(135deg,var(--cyan),var(--violet));
+            background:linear-gradient(135deg,var(--primary),var(--darkest));
             -webkit-background-clip:text;-webkit-text-fill-color:transparent;
             font-weight:800;font-family:'Playfair Display',serif;
         }
-        .hero-text-compact{max-width:600px;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.4;color:var(--white);}
+        .hero-text-compact{max-width:600px;margin:0 auto 1.5rem;font-size:1.125rem;line-height:1.4;color:var(--darkest);}
         .stat-card{
-            background: rgba(255, 255, 255, 0.05); padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);
+            background: var(--white); padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);
             text-align:center;transition:all .3s;height:100%;
         }
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
-        .counter{font-size:2rem;font-weight:800;color:var(--cyan);}
+        .counter{font-size:2rem;font-weight:800;color:var(--primary);}
 
         /* Feedback carousel */
         .feedback-viewport{overflow:hidden;margin:1.5rem 0;}
@@ -128,23 +133,23 @@
         .feedback-item{flex-shrink:0;width:300px;height:auto;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
         .feedback-item img{width:100%;height:auto;display:block;}
 
-        .step-card{background: rgba(255, 255, 255, 0.05); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
+        .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
         .step-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
-        .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--cyan),var(--violet));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;}
+        .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--light));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;}
 
         .accordion-item{border:none;border-radius:10px !important;margin-bottom:.75rem;box-shadow:var(--shadow);}
-        .accordion-button{background: rgba(255, 255, 255, 0.05); color:var(--white);font-weight:600;padding:1rem;}
-        .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--mid-indigo),rgba(255,255,255,0.1));color:var(--cyan);}
-        .accordion-body{color:var(--white);}
+        .accordion-button{background: var(--white); color:var(--darkest);font-weight:600;padding:1rem;}
+        .accordion-button:not(.collapsed){background:linear-gradient(135deg,var(--lightest),var(--white));color:var(--primary);}
+        .accordion-body{color:var(--darkest);}
 
         /* Modal backdrops */
-        .form-backdrop,.privacy-modal{position:fixed;inset:0;background:rgba(15,12,41,.85);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s;}
+        .form-backdrop,.privacy-modal{position:fixed;inset:0;background:rgba(13,36,64,.8);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s;}
         .form-backdrop.show,.privacy-modal.show{opacity:1;visibility:visible;}
-        #formContainer,#privacyContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s;background:var(--mid-indigo);border:1px solid var(--cyan);border-radius:15px;box-shadow:var(--glow-intense);}
+        #formContainer,#privacyContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s;background:var(--white);border:1px solid var(--primary);border-radius:15px;box-shadow:var(--glow-intense);}
         #formContainer.show,#privacyContent.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1);}
-        .form-card{box-shadow:0 0 40px rgba(0,217,255,.3);border:1px solid var(--cyan);}
-        .form-control,.form-select{background: rgba(255, 255, 255, 0.07); border:2px solid rgba(255,255,255,.1);color:var(--white);border-radius:8px;padding:.6rem .9rem;transition:all .3s;}
-        .form-control:focus,.form-select:focus{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(0,217,255,.15);}
+        .form-card{box-shadow:0 0 40px rgba(46,94,153,.3);border:1px solid var(--primary);}
+        .form-control,.form-select{background: var(--lightest); border:2px solid var(--light);color:var(--darkest);border-radius:8px;padding:.6rem .9rem;transition:all .3s;}
+        .form-control:focus,.form-select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(46,94,153,.15);}
 
         @media(max-width:768px){
             section{padding:40px 0;}
@@ -161,7 +166,7 @@
         }
     </style>
 </head>
-<body class="text-light">
+<body class="text-dark">
 
 <!-- FORM BACKDROP -->
 <div class="form-backdrop" id="formBackdrop"></div>
@@ -169,8 +174,8 @@
 <!-- PRIVACY MODAL -->
 <div class="privacy-modal" id="privacyModal">
     <div class="privacy-content" id="privacyContent">
-        <button class="btn-close btn-close-white position-absolute top-0 end-0 m-3" id="closePrivacyBtn" aria-label="Close"></button>
-        <h2 class="h4 fw-bold mb-3" style="color:var(--cyan);">Privacy Policy</h2>
+        <button class="btn-close position-absolute top-0 end-0 m-3" id="closePrivacyBtn" aria-label="Close"></button>
+        <h2 class="h4 fw-bold mb-3" style="color:var(--primary);">Privacy Policy</h2>
         <div style="font-size:0.9rem;line-height:1.6;">
             <p><strong>Information We Collect:</strong> Name, phone, email you provide via WhatsApp or forms.</p>
             <p><strong>How We Use It:</strong> Only to share course info, support, updates. Never sold.</p>
@@ -193,7 +198,7 @@
 </section>
 
 <!-- ===== ABOUT / VIDEO ===== -->
-<section class="py-5" style="background: var(--deep-indigo);">
+<section class="py-5" style="background: var(--lightest);">
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-6">
@@ -210,15 +215,15 @@
                     <p class="fs-5 d-flex align-items-center gap-2 mb-2">💻 Freelancer</p>
                     <p class="fs-5 d-flex align-items-center gap-2">🎯 Online-Skills Coach</p>
                 </div>
-                <div class="p-3 rounded-2 mb-3 glow-border" style="background: rgba(255,255,255,0.05);">
-                    <h3 class="h5 fw-bold mb-2" style="color:var(--cyan);">🎯 My Vision:</h3>
+                <div class="p-3 rounded-2 mb-3 glow-border" style="background: var(--white);">
+                    <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">🎯 My Vision:</h3>
                     <p class="fs-5 fw-semibold mb-0">"Empower People to Empower Themselves"</p>
                 </div>
                 <button class="wa-btn mb-4 open-any shine-effect">📲 Connect on WhatsApp</button>
                 <div class="row g-3">
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="5" data-suffix="+">0</div><p style="color: var(--white);">Years Experience</p></div></div>
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="2000" data-suffix="+">0</div><p style="color: var(--white);">Students Helped</p></div></div>
-                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="100000" data-prefix="₹">0</div><p style="color: var(--white);">Monthly Earning</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="5" data-suffix="+">0</div><p>Years of Experience</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="2000" data-suffix="+">0</div><p>Students Helped</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="100000" data-prefix="₹">0</div><p>Monthly Earning</p></div></div>
                 </div>
             </div>
         </div>
@@ -226,9 +231,9 @@
 </section>
 
 <!-- ===== FEEDBACK ===== -->
-<section class="py-5" style="background: var(--deep-indigo);">
+<section class="py-5" style="background: var(--white);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--cyan);">✨ Real Success Stories</h2>
+        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
         <p class="text-center text-muted mb-4">100% real feedback from real students</p>
         <div class="feedback-viewport">
             <div class="feedback-track">
@@ -262,17 +267,17 @@
 </section>
 
 <!-- ===== STEPS ===== -->
-<section class="py-5" style="background: var(--deep-indigo);">
+<section class="py-5" style="background: var(--lightest);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--cyan);">What Happens When You Join?</h2>
+        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">What Happens When You Join?</h2>
         <div class="row g-3">
             <div class="col-md-6 col-lg-3">
                 <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">1</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--cyan);">Instant Connection</h3>
-                            <p style="color: var(--white);">Direct WhatsApp access to me</p>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Instant Connection</h3>
+                            <p>Direct WhatsApp access to me</p>
                         </div>
                     </div>
                 </div>
@@ -282,8 +287,8 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">2</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--cyan);">Complete Access</h3>
-                            <p style="color: var(--white);">Proven step-by-step training system</p>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Complete Access</h3>
+                            <p>Proven step-by-step training system</p>
                         </div>
                     </div>
                 </div>
@@ -293,8 +298,8 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">3</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--cyan);">Daily Mentorship</h3>
-                            <p style="color: var(--white);">24/7 support & community access</p>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Daily Mentorship</h3>
+                            <p>24/7 support & community access</p>
                         </div>
                     </div>
                 </div>
@@ -304,8 +309,8 @@
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">4</div>
                         <div>
-                            <h3 class="h5 fw-bold mb-2" style="color:var(--cyan);">Start Earning</h3>
-                            <p style="color: var(--white);">Begin from Week 1 confidently</p>
+                            <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">Start Earning</h3>
+                            <p>Begin from Week 1 confidently</p>
                         </div>
                     </div>
                 </div>
@@ -315,38 +320,38 @@
     </div>
 </section>
 
-<!-- ===== STATS – HIDDEN-TEXT FIXED ===== -->
-<section class="py-5" style="background: linear-gradient(135deg,var(--deep-indigo),var(--mid-indigo));">
+<!-- ===== STATS (NOW PURE WHITE) ===== -->
+<section class="py-5" style="background: linear-gradient(135deg,var(--lightest),var(--white));">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--cyan);">Know Your Coach</h2>
+        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Know Your Coach</h2>
         <div class="row g-3 align-items-center">
             <div class="col-md-6">
-                <div class="d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm glow-border" style="background: rgba(255,255,255,0.05);">
-                    <div class="text-dark d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--cyan),var(--violet));">⭐</div>
+                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 mb-3 shadow-sm">
+                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--primary),var(--light));">⭐</div>
                     <div>
                         <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="5" data-suffix="+">0</span></h3>
-                        <p style="color: var(--white);">Years of Experience</p>
+                        <p>Years of Experience</p>
                     </div>
                 </div>
-                <div class="d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm glow-border" style="background: rgba(255,255,255,0.05);">
-                    <div class="text-dark d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--violet),var(--hot-pink));">👥</div>
+                <div class="stats-white d-flex align-items-center gap-3 p-3 rounded-2 shadow-sm">
+                    <div class="text-white d-flex align-items-center justify-content-center rounded-circle" style="width:70px;height:70px;background:linear-gradient(135deg,var(--light),var(--darkest));">👥</div>
                     <div>
                         <h3 class="fw-bold mb-1 fs-2"><span class="counter" data-target="1000" data-suffix="+">0</span></h3>
-                        <p style="color: var(--white);">Entrepreneurs Reached</p>
+                        <p>Entrepreneurs Reached</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 text-center">
-                <div class="p-4 rounded-3 shadow-lg text-dark glow-pulse" style="background: linear-gradient(135deg,var(--cyan),var(--violet));">
-                    <h3 class="fw-bold fs-3 mb-2">🔥 Now it's YOUR time</h3>
+                <div class="stats-white p-4 rounded-3 shadow-lg glow-pulse">
+                    <h3 class="fw-bold fs-3 mb-2" style="color:var(--primary);">🔥 Now it's YOUR time</h3>
                     <div class="row text-center">
                         <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0">₹<span class="counter" data-target="1600000">0</span></h4>
-                            <p style="color: var(--white);">Earned by Students</p>
+                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);">₹<span class="counter" data-target="1600000">0</span></h4>
+                            <p class="text-muted">Earned by Students</p>
                         </div>
                         <div class="col-6">
-                            <h4 class="fw-bold fs-2 mb-0"><span class="counter" data-target="300" data-suffix="+">0</span></h4>
-                            <p style="color: var(--white);">Earning ₹50K–₹1L</p>
+                            <h4 class="fw-bold fs-2 mb-0" style="color:var(--primary);"><span class="counter" data-target="300" data-suffix="+">0</span></h4>
+                            <p class="text-muted">Earning ₹50K–₹1L</p>
                         </div>
                     </div>
                 </div>
@@ -356,20 +361,20 @@
 </section>
 
 <!-- ===== FAQ ===== -->
-<section class="py-5" style="background: var(--deep-indigo);">
+<section class="py-5" style="background: var(--white);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--cyan);">Frequently Asked Questions</h2>
+        <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">What kind of work will I be doing?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Digital skills: Website Design, Graphics, Editing, Content Creation, Monetization, etc. 100% legitimate.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Is this program legitimate & safe?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Genuine training. 2000+ students earning consistently. Verify credentials.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">How much time daily?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Just 1-2 hours daily. Flexible for everyone.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">When will I start earning?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Within 1 month. Sustainable income in 1-2 months.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Any prior experience needed?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">No experience needed! Step-by-step guidance provided.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">What support after joining?</button></h2><div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Daily mentorship, 24/7 WhatsApp, weekly calls & community.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">Any investment required?</button></h2><div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Nominal fee covers everything. No hidden costs.</div></div></div>
-                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">Can I do this alongside job/studies?</button></h2><div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body" style="color: var(--white);">Yes! Designed for busy people. Learn in free time.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">What kind of work will I be doing?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Digital skills: Website Design, Graphics, Editing, Content Creation, Monetization, etc. 100% legitimate.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Is this program legitimate & safe?</button></h2><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Genuine training. 2000+ students earning consistently. Verify credentials.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">How much time daily?</button></h2><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Just 1-2 hours daily. Flexible for everyone.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">When will I start earning?</button></h2><div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Within 1 month. Sustainable income in 1-2 months.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">Any prior experience needed?</button></h2><div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">No experience needed! Step-by-step guidance provided.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">What support after joining?</button></h2><div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Daily mentorship, 24/7 WhatsApp, weekly calls & community.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">Any investment required?</button></h2><div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Nominal fee covers everything. No hidden costs.</div></div></div>
+                    <div class="accordion-item glow-border"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">Can I do this alongside job/studies?</button></h2><div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes! Designed for busy people. Learn in free time.</div></div></div>
                 </div>
             </div>
         </div>
@@ -377,32 +382,32 @@
 </section>
 
 <!-- ===== FINAL CTA ===== -->
-<section class="py-5 text-dark" style="background: linear-gradient(135deg,var(--cyan),var(--violet));">
+<section class="py-5 text-white" style="background: linear-gradient(135deg,var(--primary),var(--light));">
     <div class="container text-center">
         <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Life?</h2>
         <p class="fs-5 mb-4">Join thousands on their journey to financial independence</p>
-        <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--deep-indigo);color:var(--white);">
-            <h3 class="h4 fw-bold mb-3" style="color:var(--cyan);">📲 How to Start?</h3>
+        <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--white);color:var(--darkest);">
+            <h3 class="h4 fw-bold mb-3" style="color:var(--primary);">📲 How to Start?</h3>
             <p class="fs-5 mb-3">Simply message me on WhatsApp:</p>
             <div class="row g-2 mb-3">
-                <div class="col-md-4"><div class="glow-border text-light p-3 rounded" style="background:rgba(255,255,255,0.07);"><strong>📝 Name:</strong> Full Name</div></div>
-                <div class="col-md-4"><div class="glow-border text-light p-3 rounded" style="background:rgba(255,255,255,0.07);"><strong>🎂 Age:</strong> Your Age</div></div>
-                <div class="col-md-4"><div class="glow-border text-light p-3 rounded" style="background:rgba(255,255,255,0.07);"><strong>💼 Profession:</strong> Current Status</div></div>
+                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>📝 Name:</strong> Full Name</div></div>
+                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>🎂 Age:</strong> Your Age</div></div>
+                <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>💼 Profession:</strong> Current Status</div></div>
             </div>
-            <p class="fs-6 fw-semibold mb-3" style="color:var(--cyan);">📌 Save My Number: 7489733601</p>
-            <button class="wa-btn open-any glow-pulse" style="background:var(--deep-indigo);color:var(--white);border:1px solid var(--cyan);">📲 Message on WhatsApp Now</button>
+            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 7570940048</p>
+            <button class="wa-btn open-any glow-pulse" style="background:var(--white);color:var(--primary);border:1px solid var(--primary);">📲 Message on WhatsApp Now</button>
             <div class="text-center mt-4">
-                <a href="https://www.instagram.com/idp.nisha?igsh=MTY5bDJwYTJvMWJseA==" target="_blank" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-2"><i data-lucide="instagram" width="24"></i>Follow on Instagram</a>
+                <a href="https://www.instagram.com/idp.nisha?igsh=MTY5bDJwYTJvMWJseA==" target="_blank" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2"><i data-lucide="instagram" width="24"></i>Follow on Instagram</a>
             </div>
         </div>
         <div class="card border-0 p-3 mb-3 glow-border" style="background:rgba(255,255,255,.15);">
             <h4 class="h5 fw-bold mb-2">⏳ Within 24 hours:</h4>
-            <div class="row text-dark">
+            <div class="row text-white">
                 <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">📋 Complete Details</div></div>
                 <div class="col-md-6"><div class="d-flex align-items-center gap-2 justify-content-center">🗺 Clear Roadmap</div></div>
             </div>
         </div>
-        <div class="mt-4"><button class="btn btn-outline-dark btn-sm" id="privacyBtn"><i data-lucide="shield-check" width="16"></i> Privacy Policy</button></div>
+        <div class="mt-4"><button class="btn btn-outline-light btn-sm" id="privacyBtn"><i data-lucide="shield-check" width="16"></i> Privacy Policy</button></div>
         <p class="fs-6 mb-2 mt-3">🌟 Empower with skills • 🌈 Support every vision • 🚀 Dreams to direction</p>
         <p class="fs-4 fw-bold mb-1">❤️ With Strength & Sincerity, Nisha Giri</p>
         <p class="fs-6 opacity-90 mb-0">Powered by Adhabits</p>
@@ -413,20 +418,66 @@
 <div id="formContainer">
     <div class="card form-card glow-pulse">
         <div class="card-body p-4 position-relative">
-            <button id="closeFormBtn" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" aria-label="Close"></button>
+            <button id="closeFormBtn" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
             <div class="text-center mb-4">
-                <h2 class="h4 fw-bold mb-1" style="color:var(--cyan);">🚀 Start Your Journey</h2>
+                <h2 class="h4 fw-bold mb-1" style="color:var(--primary);">🚀 Start Your Journey</h2>
                 <p class="text-muted small">Fill details to get started</p>
             </div>
             <form id="mainForm" novalidate>
                 <input type="hidden" id="sourceInfo" name="sourceInfo">
                 <div class="row g-2">
-                    <div class="col-12"><label class="form-label d-flex align-items-center gap-2"><i data-lucide="user" style="width:16px;"></i> Full Name *</label><input id="inp_name" type="text" class="form-control" required placeholder="Your full name"></div>
-                    <div class="col-12"><label class="form-label d-flex align-items-center gap-2"><i data-lucide="phone" style="width:16px;"></i> Phone *</label><input id="inp_phone" type="tel" class="form-control" required placeholder="10-digit number" maxlength="10"></div>
-                    <div class="col-6"><label class="form-label d-flex align-items-center gap-2"><i data-lucide="calendar" style="width:16px;"></i> Age *</label><input id="inp_age" type="number" class="form-control" required placeholder="Age" min="15" max="65"></div>
-                    <div class="col-6"><label class="form-label d-flex align-items-center gap-2"><i data-lucide="users" style="width:16px;"></i> Gender *</label><select id="inp_gender" class="form-select" required><option value="">Select</option><option value="female">Female</option><option value="male">Male</option><option value="other">Other</option></select></div>
-                    <div class="col-12"><label class="form-label d-flex align-items-center gap-2"><i data-lucide="briefcase" style="width:16px;"></i> Profession *</label><select id="inp_profession" class="form-select" required><option value="">Select Profession</option><option>Student</option><option>Housewife</option><option>Working Professional</option><option>Other</option></select></div>
-                    <div class="col-12"><button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button></div>
+                    <!-- NAME -->
+                    <div class="col-12">
+                        <label class="form-label d-flex align-items-center gap-2">
+                            <i data-lucide="user" style="width:16px;"></i> Full Name *
+                        </label>
+                        <input id="inp_name" type="text" class="form-control" required value="Your full name">
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="col-12">
+                        <label class="form-label d-flex align-items-center gap-2">
+                            <i data-lucide="phone" style="width:16px;"></i> Phone *
+                        </label>
+                        <input id="inp_phone" type="tel" class="form-control" required maxlength="10" value="Your phone number">
+                    </div>
+
+                    <!-- AGE -->
+                    <div class="col-6">
+                        <label class="form-label d-flex align-items-center gap-2">
+                            <i data-lucide="calendar" style="width:16px;"></i> Age *
+                        </label>
+                        <input id="inp_age" type="number" class="form-control" required min="15" max="65" value="Your age">
+                    </div>
+
+                    <!-- GENDER -->
+                    <div class="col-6">
+                        <label class="form-label d-flex align-items-center gap-2">
+                            <i data-lucide="users" style="width:16px;"></i> Gender *
+                        </label>
+                        <select id="inp_gender" class="form-select" required>
+                            <option value="female" selected>Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- PROFESSION -->
+                    <div class="col-12">
+                        <label class="form-label d-flex align-items-center gap-2">
+                            <i data-lucide="briefcase" style="width:16px;"></i> Profession *
+                        </label>
+                        <select id="inp_profession" class="form-select" required>
+                            <option selected>Student</option>
+                            <option>Housewife</option>
+                            <option>Working Professional</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -469,7 +520,7 @@
     const privacyBtn=document.getElementById('privacyBtn');
     const closePrivacyBtn=document.getElementById('closePrivacyBtn');
     const SCRIPT_URL="https://script.google.com/macros/s/AKfycbyc8_Cc-0Do-CiJ4rePqcDh8VR4x3Co05yWGR4gZYfzFMoATFCM2G_GbLJXK6rRsMHg2w/exec";
-    const WA_NUMBER_INT="917489733601";
+    const WA_NUMBER_INT="917570940048";
 
     function openForm(source='site'){
         sourceInfo.value=source;
